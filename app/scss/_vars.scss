@@ -8,3 +8,19 @@ $white : #fff;
   font-size: 16px;
   line-height: 19px;
 }
+
+%H0 {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 96px;
+  line-height: 116px;
+}
+
+%button {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
+}
