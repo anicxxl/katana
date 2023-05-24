@@ -1,0 +1,16 @@
+.container {
+  max-width: 1230px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.logo {
+  max-width: 178px;
+  width: 100%;
+  height: 47px;
+  overflow: hidden;
+
+  &-img {
+    object-fit: cover;
+  }
+}
