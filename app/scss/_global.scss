@@ -1,3 +1,12 @@
+body{
+  display: flex;
+  flex-direction: column;
+}
+
+.main{
+  flex-grow: 1;
+}
+
 .container {
   max-width: 1230px;
   padding: 0 15px;
