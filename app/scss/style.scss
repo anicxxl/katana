@@ -68,6 +68,7 @@
   height: 100%;
   z-index: 100;
   padding-top: calc(183px + 107px);
+  padding-bottom: 92px;
   text-align: center;
 
   &__title {
@@ -115,6 +116,7 @@
   justify-content: center;
   align-items: center;
   padding: 0 30px 92px;
+  bottom: -4px !important;
 }
 
 .swiper-pagination-bullet {
