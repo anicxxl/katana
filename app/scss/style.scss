@@ -174,7 +174,89 @@
 
 }
 
+/* =====INSTRUCTIONS===== */
 
+.instructions {
+  padding-top: 150px;
+
+  &__inner {
+    max-width: 580px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  &__text {
+    @extend %Text-16;
+    margin-bottom: 50px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+.instructions-list {
+  max-width: 510px;
+  width: 100%;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  list-style: none;
+  margin-bottom: 70px;
+  /*
+  Это устанавливает начальное значение счетчика с именем "ol-decoration" внутри элемента,
+  к которому применяется класс "instructions-list".
+  */
+  counter-reset: ol-decoration;
+
+  &__title {
+    @extend %H2;
+    margin-bottom: 79px;
+  }
+
+  &-item {
+    @extend %Text-16;
+    position: relative;
+    margin-left: auto;
+    padding: 19px 0px 19px 240px;
+
+    &::before {
+      /*
+      Устанавливает содержимое псевдоэлемента "::before" в значение счетчика с именем "ol-decoration".
+      Это означает, что значение счетчика будет отображаться перед содержимым каждого элемента.
+      */
+      content: counter(ol-decoration);
+      /*
+      Увеличивает значение счетчика с именем "ol-decoration" на единицу.
+      Это означает, что значение счетчика будет увеличиваться для каждого элемента,
+      к которому применяется класс "instructions-list-item".
+      */
+      counter-increment: ol-decoration;
+
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100px;
+      height: 100px;
+      background-color: $red;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @extend %H1;
+      color: $white;
+      border-radius: 50%;
+    }
+  }
+
+}
 
 
 /*
