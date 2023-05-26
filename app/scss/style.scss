@@ -259,6 +259,40 @@
 }
 
 
+/* =====VIDEO SECTION===== */
+
+.video {
+  padding-top: 150px;
+
+  &__inner {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  &__subtitle{
+    @extend %H2;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  &__bg{
+    width: 1000px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+  }
+}
+
+
 /*
 font-family: 'Inter', sans-serif;
 fw : 400 , 700
