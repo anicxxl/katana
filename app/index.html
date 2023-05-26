@@ -2,20 +2,122 @@
 <html lang="en">
 
 <head>
-	<!-- META -->
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- META -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<title>KATANA</title>
-	<!-- LINKS -->
-	<link rel="stylesheet" href="css/style.min.css">
-	<!-- SCRIPTS -->
-	<script src="js/main.min.js" defer></script>
+  <title>KATANA</title>
+
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <!-- LINKS -->
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
-	
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="#" class="logo header__logo">
+          <img src="images/logo.png" alt="logo">
+        </a>
+
+        <nav class="nav header__nav">
+          <ul class="header-menu">
+            <li class="header-menu__item"><a href="#" class="header-menu__item-link">NEW WEAPONS</a></li>
+            <li class="header-menu__item"><a href="#" class="header-menu__item-link">SKINS</a></li>
+            <li class="header-menu__item"><a href="#" class="header-menu__item-link">TUTORIALS</a></li>
+            <li class="header-menu__item"><a href="#" class="header-menu__item-link">SHARPNESS TEST</a></li>
+            <li class="header-menu__item"><a href="#" class="header-menu__item-link">CONTACT US</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="top">
+      <h1 class="title top__title">
+        BEST STEEL WEAPONS
+        FROM “KATANA”
+      </h1>
+
+      <a href="#" class="top__link">BUy</a>
+    </section>
+
+    <div class="slider">
+      <!--Главный контейнер слайдера -->
+      <div class="swiper main-slider">
+        <!-- Обязательная оболочка -->
+        <div class="swiper-wrapper main-slider-wrapper">
+          <!-- Слайды -->
+          <div class="swiper-slide main-slider-slide">
+            <img src="images/slider/1.jpg" alt="1">
+          </div>
+
+          <div class="swiper-slide main-slider-slide">
+            <img src="images/slider/2.jpg" alt="2">
+          </div>
+
+          <div class="swiper-slide main-slider-slide">
+            <img src="images/slider/3.jpg" alt="3">
+          </div>
+
+          <div class="swiper-slide main-slider-slide">
+            <img src="images/slider/4.jpg" alt="4">
+          </div>
+        </div>
+        <!-- Добавляем если нужна пагинация -->
+        <div class="swiper-pagination main-slider-pagination"></div>
+      </div>
+    </div>
+
+    <section class="benefits">
+      <div class="container">
+        <h2 class="title benefits__title">
+          Why us?
+        </h2>
+
+        <div class="benefits__items">
+          <div class="benefits-item">
+            <img src="images/benefits/1.jpg" class="benefits-item__img" alt="benefits 1 item img">
+            <h4 class="benefits-item__name">Best Quality</h4>
+            <p class="benefits-item__description">We make weapons only from the highest quality metals. You will rise
+              above your enemies - holding our elite weapons in your hands</p>
+          </div>
+
+          <div class="benefits-item">
+            <img src="images/benefits/2.jpg" class="benefits-item__img" alt="benefits 2 item img">
+            <h4 class="benefits-item__name">Free Photo Set</h4>
+            <p class="benefits-item__description">If you buy our products, our staff photographers will make you a great
+              photo set in samurai style</p>
+          </div>
+
+          <div class="benefits-item">
+            <img src="images/benefits/3.jpg" class="benefits-item__img" alt="benefits 3 item img">
+            <h4 class="benefits-item__name">Free Sharpening</h4>
+            <p class="benefits-item__description">After purchase, we provide free sharpening of the weapon from
+              professionals during the first year of use.</p>
+          </div>
+
+          <div class="benefits-item">
+            <img src="images/benefits/4.jpg" class="benefits-item__img" alt="benefits 4 item img">
+            <h4 class="benefits-item__name">Wide Assortment</h4>
+            <p class="benefits-item__description">Here you can buy katana, different knives, shuriken, knuckles, as well
+              as customize it all for yourself</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"></footer>
+
+  <!-- SCRIPTS -->
+  <script src="js/main.min.js" defer></script>
 </body>
 
 </html>
