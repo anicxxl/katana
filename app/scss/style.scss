@@ -77,6 +77,7 @@
     max-width: 1094px;
     margin: 0 auto 38px;
     color: $white;
+    text-transform: uppercase;
   }
 
   &__link {
@@ -273,14 +274,16 @@
   &__title {
     margin-bottom: 20px;
     text-align: center;
+    text-transform: uppercase;
   }
-  &__subtitle{
+
+  &__subtitle {
     @extend %H2;
     text-align: center;
     margin-bottom: 50px;
   }
 
-  &__bg{
+  &__bg {
     max-width: 1000px;
     width: 100%;
     height: 500px;
@@ -295,21 +298,24 @@
 
 /*=====IMPORTANTS=====*/
 
-.importants{
+.importants {
   padding-top: 150px;
   padding-bottom: 130px;
-  &__title{
+
+  &__title {
     text-align: center;
     margin-bottom: 20px;
   }
-  &__subtitle{
+
+  &__subtitle {
     @extend %Text-16;
     max-width: 580px;
     width: 100%;
     margin: 0 auto;
     margin-bottom: 50px;
   }
-  &__items{
+
+  &__items {
     display: flex;
     justify-content: space-between;
     gap: 40px;
@@ -317,20 +323,109 @@
   }
 }
 
-.importants-item{
+.importants-item {
   max-width: 270px;
   width: 100%;
-  &__img{
+
+  &__img {
     max-width: 270px;
     width: 100%;
     height: 150px;
     object-fit: cover;
     margin-bottom: 20px;
   }
-  &__text{
+
+  &__text {
     @extend %Text-16;
   }
 }
+
+/*=====FOOTER=====*/
+
+
+.footer {
+  background-color: $black;
+  padding: 50px 0px 30px;
+  color: $white;
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 0 90px;
+    margin-bottom: 50px;
+  }
+
+  &__for-questions {
+    max-width: 806px;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto 90px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  &__phone-link{
+    color: inherit;
+  }
+}
+
+.footer-item {
+  max-width: 270px;
+
+  &__title {
+    @extend %H2;
+    margin-bottom: 40px;
+  }
+
+  &__list {
+    & li+li {
+      margin-top: 20px;
+    }
+  }
+
+  &__list-item-link {
+    @extend %Text-16;
+    text-decoration: none;
+    color: $white;
+  }
+}
+
+.footer__store-links {
+  display: flex;
+  justify-content: center;
+  gap: 54px;
+  flex-wrap: wrap;
+  margin-bottom: 52px;
+
+  & img {
+    max-width: 144px;
+    width: 100%;
+    height: 40px;
+    object-fit: cover;
+  }
+}
+
+.footer-policy{
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  &__link{
+    @extend %Text-16;
+    color: $white;
+    text-decoration: none;
+  }
+}
+
+
+
+
 
 /*
 font-family: 'Inter', sans-serif;
