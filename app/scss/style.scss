@@ -7,7 +7,7 @@
 
 /* =====HEADER===== */
 
-.header{
+.header {
   background-color: $red;
   padding: 40px 0 20px 0;
   z-index: 1000;
@@ -426,8 +426,19 @@
 }
 
 
+/*=====CHOOSE WEAPON PAGE=====*/
 
+.header--second {
+  background-color: $black;
 
+  .header-menu__item-link:hover {
+    color: $red;
+  }
+
+  .header-menu__item-link:hover::before {
+    background-color: $red;
+  }
+}
 
 /*
 font-family: 'Inter', sans-serif;
