@@ -440,6 +440,96 @@
   }
 }
 
+
+/*=====CHOOSE WEAPONS SECTION=====*/
+
+.choose-weapons {
+  padding: 100px 0 170px;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 80px;
+    row-gap: 20px;
+    margin-bottom: 100px;
+  }
+
+  &__button {
+    @extend %H2;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    row-gap: 100px;
+    margin-bottom: 100px;
+  }
+
+  &__see-more-link {
+    @extend %Text-16;
+    text-transform: uppercase;
+    max-width: 222px;
+    width: 100%;
+    min-height: 50px;
+    background-color: $black;
+    color: $white;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin: 0 auto;
+  }
+}
+
+.choose-weapons-item {
+  max-width: 270px;
+  width: 100%;
+  border: 1px solid $red;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+
+  &__name {
+    @extend %H2;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  &__price {
+    @extend %H2;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  &__link {
+    @extend %Text-16;
+    color: $red;
+    text-decoration: none;
+    border-top: 1px solid $red;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+
 /*
 font-family: 'Inter', sans-serif;
 fw : 400 , 700
