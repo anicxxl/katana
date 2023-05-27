@@ -7,7 +7,7 @@
 
 /* =====HEADER===== */
 
-.header {
+.header{
   background-color: $red;
   padding: 40px 0 20px 0;
   z-index: 1000;
@@ -32,6 +32,7 @@
 
   &__item-link {
     text-decoration: none;
+    text-transform: uppercase;
     @extend %menu;
     color: $white;
     transition: all .4s ease-in-out;
@@ -370,7 +371,7 @@
     line-height: 15px;
   }
 
-  &__phone-link{
+  &__phone-link {
     color: inherit;
   }
 }
@@ -411,12 +412,13 @@
   }
 }
 
-.footer-policy{
+.footer-policy {
   display: flex;
   justify-content: center;
   gap: 40px;
   flex-wrap: wrap;
-  &__link{
+
+  &__link {
     @extend %Text-16;
     color: $white;
     text-decoration: none;
