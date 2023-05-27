@@ -10,6 +10,11 @@
 .header {
   background-color: $red;
   padding: 40px 0 20px 0;
+  z-index: 1000;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
 
   &__inner {
     display: flex;
@@ -27,8 +32,30 @@
 
   &__item-link {
     text-decoration: none;
+    text-transform: uppercase;
     @extend %menu;
     color: $white;
+    transition: all .4s ease-in-out;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 4px;
+      bottom: -10px;
+      background-color: #fff;
+      transition: all .4s ease-in-out;
+    }
+
+    &:hover {
+      color: #000;
+
+      &::before {
+        width: 100%;
+        background-color: #000;
+      }
+    }
   }
 }
 
@@ -42,6 +69,7 @@
   height: 100%;
   z-index: 100;
   padding-top: calc(183px + 107px);
+  padding-bottom: 92px;
   text-align: center;
 
   &__title {
@@ -50,6 +78,7 @@
     max-width: 1094px;
     margin: 0 auto 38px;
     color: $white;
+    text-transform: uppercase;
   }
 
   &__link {
@@ -72,7 +101,7 @@
 /* =====MAIN SLIDER===== */
 
 .swiper-slide.main-slider-slide {
-  height: calc(100vh - 107px);
+  height: 100vh;
 
   & img {
     object-fit: cover;
@@ -89,6 +118,7 @@
   justify-content: center;
   align-items: center;
   padding: 0 30px 92px;
+  bottom: -4px !important;
 }
 
 .swiper-pagination-bullet {
@@ -117,7 +147,7 @@
     display: flex;
     justify-content: space-between;
     gap: 40px;
-
+    flex-wrap: wrap;
   }
 }
 
@@ -140,12 +170,400 @@
     @extend %H2;
   }
 
-  &__description{
+  &__description {
     @extend %Text-16;
   }
 
 }
 
+/* =====INSTRUCTIONS===== */
+
+.instructions {
+  padding-top: 150px;
+
+  &__inner {
+    max-width: 580px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  &__text {
+    @extend %Text-16;
+    margin-bottom: 50px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+.instructions-list {
+  max-width: 510px;
+  width: 100%;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  list-style: none;
+  margin-bottom: 70px;
+  /*
+  Это устанавливает начальное значение счетчика с именем "ol-decoration" внутри элемента,
+  к которому применяется класс "instructions-list".
+  */
+  counter-reset: ol-decoration;
+
+  &__title {
+    @extend %H2;
+    margin-bottom: 79px;
+  }
+
+  &-item {
+    @extend %Text-16;
+    position: relative;
+    margin-left: auto;
+    padding: 19px 0px 19px 240px;
+
+    &::before {
+      /*
+      Устанавливает содержимое псевдоэлемента "::before" в значение счетчика с именем "ol-decoration".
+      Это означает, что значение счетчика будет отображаться перед содержимым каждого элемента.
+      */
+      content: counter(ol-decoration);
+      /*
+      Увеличивает значение счетчика с именем "ol-decoration" на единицу.
+      Это означает, что значение счетчика будет увеличиваться для каждого элемента,
+      к которому применяется класс "instructions-list-item".
+      */
+      counter-increment: ol-decoration;
+
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100px;
+      height: 100px;
+      background-color: $red;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @extend %H1;
+      color: $white;
+      border-radius: 50%;
+    }
+  }
+
+}
+
+
+/* =====VIDEO SECTION===== */
+
+.video {
+  padding-top: 150px;
+
+  &__inner {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__subtitle {
+    @extend %H2;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  &__bg {
+    max-width: 1000px;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+  }
+}
+
+/*=====IMPORTANTS=====*/
+
+.importants {
+  padding-top: 150px;
+  padding-bottom: 130px;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  &__subtitle {
+    @extend %Text-16;
+    max-width: 580px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+}
+
+.importants-item {
+  max-width: 270px;
+  width: 100%;
+
+  &__img {
+    max-width: 270px;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    @extend %Text-16;
+  }
+}
+
+/*=====FOOTER=====*/
+
+
+.footer {
+  background-color: $black;
+  padding: 50px 0px 30px;
+  color: $white;
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 0 90px;
+    margin-bottom: 50px;
+  }
+
+  &__for-questions {
+    max-width: 806px;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto 90px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  &__phone-link {
+    color: inherit;
+  }
+}
+
+.footer-item {
+  max-width: 270px;
+
+  &__title {
+    @extend %H2;
+    margin-bottom: 40px;
+  }
+
+  &__list {
+    & li+li {
+      margin-top: 20px;
+    }
+  }
+
+  &__list-item-link {
+    @extend %Text-16;
+    text-decoration: none;
+    color: $white;
+  }
+}
+
+.footer__store-links {
+  display: flex;
+  justify-content: center;
+  gap: 54px;
+  flex-wrap: wrap;
+  margin-bottom: 52px;
+
+  & img {
+    max-width: 144px;
+    width: 100%;
+    height: 40px;
+    object-fit: cover;
+  }
+}
+
+.footer-policy {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+
+  &__link {
+    @extend %Text-16;
+    color: $white;
+    text-decoration: none;
+  }
+}
+
+
+/*=====CHOOSE WEAPON PAGE=====*/
+
+.header--second {
+  background-color: $black;
+
+  .header-menu__item-link:hover {
+    color: $red;
+  }
+
+  .header-menu__item-link:hover::before {
+    background-color: $red;
+  }
+}
+
+
+/*=====CHOOSE WEAPONS SECTION=====*/
+
+.choose-weapons {
+  padding: 100px 0 170px;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 80px;
+    row-gap: 20px;
+    margin-bottom: 100px;
+  }
+
+  &__button {
+    @extend %H2;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    row-gap: 100px;
+    margin-bottom: 100px;
+  }
+
+}
+
+.choose-weapons-item {
+  max-width: 270px;
+  width: 100%;
+  border: 1px solid $red;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+
+  &__name {
+    @extend %H2;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  &__price {
+    @extend %H2;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  &__link {
+    @extend %Text-16;
+    color: $red;
+    text-decoration: none;
+    border-top: 1px solid $red;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/*=====BLOG SECTION=====*/
+
+.blog{
+  padding-bottom: 220px;
+
+  &__items{
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 70px;
+  }
+}
+
+.blog-item{
+  max-width: 580px;
+  width: 100%;
+  &__img{
+    max-width: 580px;
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    margin-bottom: 30px;
+  }
+  &__info{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__title{
+    @extend %H2;
+    max-width: 354px;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  &__link{
+    @extend %Text-16;
+    text-decoration: none;
+    color: $white;
+    max-width: 80px;
+    width: 100%;
+    background-color: $red;
+    min-height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+}
 
 
 

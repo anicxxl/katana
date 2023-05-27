@@ -28,6 +28,9 @@ function styles() {
 function scripts() {
 	return src([
 		'node_modules/swiper/swiper-bundle.min.js',
+		'node_modules/jquery/dist/jquery.min.js',
+    'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
+    'node_modules/mixitup/dist/mixitup.min.js',
 		'app/js/main.js',
 	])
 		.pipe(concat('main.min.js'))

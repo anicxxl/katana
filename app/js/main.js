@@ -13,3 +13,7 @@ const swiper = new Swiper(".main-slider", {
     disableOnInteraction: false
   }
 });
+
+const chooseWeaponsMixerContainer = document.querySelector('.choose-weapons__items');
+
+var mixer = mixitup(chooseWeaponsMixerContainer);
