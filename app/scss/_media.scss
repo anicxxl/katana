@@ -74,7 +74,9 @@
 }
 
 @media (max-width:630px) {
-  .benefits {
+
+  .benefits,
+  .instructions {
     padding-top: 50px;
   }
 
@@ -99,9 +101,14 @@
   .benefits__items {
     justify-content: center;
   }
+
   .benefits-item {
     gap: 10px;
-}
+  }
+
+  .instructions-list-item {
+    padding: 19px 0px 19px 120px;
+  }
 }
 
 @media (max-width:400px) {
@@ -119,5 +126,18 @@
   .top__title {
     font-size: 46px;
     line-height: 56px;
+  }
+}
+
+@media (max-width:300px) {
+  .instructions-list-item {
+    padding: 120px 0px 19px;
+  }
+
+  .instructions-list-item::before {
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    
   }
 }
