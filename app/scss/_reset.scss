@@ -8,11 +8,6 @@ html {
 	box-sizing: inherit;
 }
 
-ul[class],
-ol[class] {
-	padding: 0;
-}
-
 body,
 h1,
 h2,
@@ -21,7 +16,8 @@ h4,
 h5,
 h6,
 p,
-ul[class],
+ul,
+ol,
 li,
 figure,
 figcaption,
@@ -29,6 +25,7 @@ blockquote,
 dl,
 dd {
 	margin: 0;
+  padding: 0;
 }
 
 ul[class] {

@@ -1,5 +1,16 @@
 "use strict"
 
+
+//ищем бургер баттон и при клике меняем класс у .header-menu , чтобы он был активный и не активный
+
+const burgerMenuButton = document.querySelector('.header-button');
+const headerMenu = document.querySelector('.header-menu');
+
+burgerMenuButton.addEventListener('click', () => {
+  headerMenu.classList.toggle('header-menu--active');
+});
+
+
 const swiper = new Swiper(".main-slider", {
   pagination: {
     el: ".swiper-pagination",

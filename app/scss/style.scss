@@ -29,6 +29,9 @@
   display: flex;
   gap: 35px;
   flex-wrap: wrap;
+  &__item{
+    padding-bottom: 10px;
+  }
 
   &__item-link {
     text-decoration: none;
@@ -45,6 +48,7 @@
       width: 0%;
       height: 4px;
       bottom: 0px;
+      left: 0;
       background-color: #fff;
       transition: all .4s ease-in-out;
     }
@@ -59,6 +63,31 @@
     }
   }
 }
+
+.header-button{
+  width: 50px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .3s ease-in-out;
+
+  &__line{
+    width: 100%;
+    height: 4px;
+    background-color: $black;
+  }
+}
+
 
 /* =====TOP SECTION===== */
 
@@ -120,6 +149,7 @@
   align-items: center;
   padding: 0 30px 92px;
   bottom: -4px !important;
+  transition: all .3s ease-in-out;
 }
 
 .swiper-pagination-bullet {
