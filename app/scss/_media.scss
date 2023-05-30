@@ -71,12 +71,17 @@
     opacity: 0;
   }
 
+  .video__bg {
+    height: 350px;
+  }
+
 }
 
 @media (max-width:630px) {
 
   .benefits,
-  .instructions {
+  .instructions,
+  .video {
     padding-top: 50px;
   }
 
@@ -109,6 +114,16 @@
   .instructions-list-item {
     padding: 19px 0px 19px 120px;
   }
+
+
+  .video__bg {
+    height: 300px;
+  }
+  .video__img{
+    max-width: 60px;
+  }
+
+
 }
 
 @media (max-width:400px) {
@@ -119,6 +134,10 @@
   .header-button {
     width: 40px;
     height: 40px;
+  }
+  
+  .video__bg {
+    height: 200px;
   }
 }
 
@@ -138,6 +157,9 @@
     left: 50%;
     top: 0;
     transform: translateX(-50%);
-    
+
+  }
+  .video__bg {
+    height: 150px;
   }
 }

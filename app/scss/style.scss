@@ -325,6 +325,11 @@
     background-size: cover;
     background-position: top center;
   }
+  &__img{
+    max-width: 80px;
+    height: 56px;
+    object-fit: contain;
+  }
 }
 
 /*=====IMPORTANTS=====*/
