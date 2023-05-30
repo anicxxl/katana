@@ -81,8 +81,10 @@
 
   .benefits,
   .instructions,
-  .video {
+  .video,
+  .importants {
     padding-top: 50px;
+    padding-bottom: 50px;
   }
 
   .top {
@@ -119,10 +121,14 @@
   .video__bg {
     height: 300px;
   }
-  .video__img{
+
+  .video__img {
     max-width: 60px;
   }
 
+  .importants__items {
+    justify-content: center;
+  }
 
 }
 
@@ -135,7 +141,7 @@
     width: 40px;
     height: 40px;
   }
-  
+
   .video__bg {
     height: 200px;
   }
@@ -149,6 +155,10 @@
 }
 
 @media (max-width:300px) {
+  .title{
+    font-size: 38px;
+    line-height: 48px;
+  }
   .instructions-list-item {
     padding: 120px 0px 19px;
   }
@@ -159,6 +169,7 @@
     transform: translateX(-50%);
 
   }
+
   .video__bg {
     height: 150px;
   }
