@@ -102,7 +102,7 @@
 /* =====MAIN SLIDER===== */
 
 .swiper-slide.main-slider-slide {
-  height: 100vh;
+  height: calc(100vh - 107px);
 
   & img {
     object-fit: cover;
