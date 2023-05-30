@@ -12,6 +12,7 @@ burgerMenuButton.addEventListener('click', () => {
 
 
 const swiper = new Swiper(".main-slider", {
+  effect: "fade",
   pagination: {
     el: ".swiper-pagination",
   },

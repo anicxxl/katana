@@ -73,7 +73,11 @@
 
 }
 
-@media (max-width:600px) {
+@media (max-width:630px) {
+  .benefits {
+    padding-top: 50px;
+  }
+
   .top {
     padding-top: 140px;
     padding-bottom: 92px;
@@ -92,6 +96,12 @@
     font-size: 28px;
   }
 
+  .benefits__items {
+    justify-content: center;
+  }
+  .benefits-item {
+    gap: 10px;
+}
 }
 
 @media (max-width:400px) {
@@ -105,7 +115,7 @@
   }
 }
 
-@media (max-width:310px) {
+@media (max-width:330px) {
   .top__title {
     font-size: 46px;
     line-height: 56px;
