@@ -130,6 +130,9 @@
     justify-content: center;
   }
 
+  .footer__items {
+    padding: 0 30px;
+  }
 }
 
 @media (max-width:400px) {
@@ -155,10 +158,11 @@
 }
 
 @media (max-width:300px) {
-  .title{
+  .title {
     font-size: 38px;
     line-height: 48px;
   }
+
   .instructions-list-item {
     padding: 120px 0px 19px;
   }
