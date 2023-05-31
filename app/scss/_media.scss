@@ -31,6 +31,10 @@
     line-height: 96px;
   }
 
+  .header--second .header-menu{
+    background-color: $black;
+  }
+
   .header-menu {
     flex-direction: column;
     align-items: center;
