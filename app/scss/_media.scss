@@ -25,7 +25,7 @@
   }
 }
 
-@media (max-width:930px) {
+@media (max-width:960px) {
   .top__title {
     font-size: 76px;
     line-height: 96px;
@@ -156,6 +156,14 @@
   .blog-item__img {
     height: 170px;
   }
+
+  .contact-form__inputs {
+    flex-direction: column;
+  }
+
+  .contact-form__input {
+    max-width: 100%;
+  }
 }
 
 @media (max-width:400px) {
@@ -171,7 +179,7 @@
   .video__bg {
     height: 200px;
   }
-  
+
   .blog-item__title {
     white-space: normal;
   }
