@@ -29,6 +29,9 @@
   display: flex;
   gap: 35px;
   flex-wrap: wrap;
+  &__item{
+    padding-bottom: 10px;
+  }
 
   &__item-link {
     text-decoration: none;
@@ -37,13 +40,15 @@
     color: $white;
     transition: all .4s ease-in-out;
     position: relative;
+    padding-bottom: 10px;
 
     &::before {
       content: "";
       position: absolute;
       width: 0%;
       height: 4px;
-      bottom: -10px;
+      bottom: 0px;
+      left: 0;
       background-color: #fff;
       transition: all .4s ease-in-out;
     }
@@ -59,6 +64,36 @@
   }
 }
 
+.header-button{
+  width: 50px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .3s ease-in-out;
+
+  &__line{
+    width: 100%;
+    height: 4px;
+    background-color: $black;
+  }
+}
+
+.header--second .header-button__line{
+  background-color: #fff;
+}
+
+
+
 /* =====TOP SECTION===== */
 
 .top {
@@ -66,7 +101,6 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
   z-index: 100;
   padding-top: calc(183px + 107px);
   padding-bottom: 92px;
@@ -95,13 +129,14 @@
     padding: 15px 20px;
     margin: 0 auto;
     background-color: $white;
+    overflow: hidden;
   }
 }
 
 /* =====MAIN SLIDER===== */
 
 .swiper-slide.main-slider-slide {
-  height: 100vh;
+  height: calc(100vh - 107px);
 
   & img {
     object-fit: cover;
@@ -119,6 +154,7 @@
   align-items: center;
   padding: 0 30px 92px;
   bottom: -4px !important;
+  transition: all .3s ease-in-out;
 }
 
 .swiper-pagination-bullet {
@@ -295,6 +331,11 @@
     background-size: cover;
     background-position: top center;
   }
+  &__img{
+    max-width: 80px;
+    height: 56px;
+    object-fit: contain;
+  }
 }
 
 /*=====IMPORTANTS=====*/
@@ -465,16 +506,42 @@
     border: none;
     background-color: transparent;
     cursor: pointer;
+    transition: all .2s ease-in-out;
+    position: relative;
+    padding-bottom: 10px;
+
+    &::before {
+      content: "";
+      width: 0%;
+      height: 4px;
+      position: absolute;
+      background-color: $red;
+      bottom: 0;
+      left: 0;
+      transition: all .3s ease-in-out;
+      background-color: $black;
+    }
   }
 
   &__items {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 40px;
     row-gap: 100px;
     margin-bottom: 100px;
   }
 
+
+}
+
+.choose-weapons__button.mixitup-control-active {
+  color: $red;
+
+  &::before {
+    width: 100%;
+    background-color: $red;
+  }
 }
 
 .choose-weapons-item {
@@ -516,33 +583,37 @@
 
 /*=====BLOG SECTION=====*/
 
-.blog{
+.blog {
   padding-bottom: 220px;
 
-  &__items{
+  &__items {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 40px;
     margin-bottom: 70px;
   }
 }
 
-.blog-item{
+.blog-item {
   max-width: 580px;
   width: 100%;
-  &__img{
+
+  &__img {
     max-width: 580px;
     width: 100%;
     height: 260px;
     object-fit: cover;
     margin-bottom: 30px;
   }
-  &__info{
+
+  &__info {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
   }
-  &__title{
+
+  &__title {
     @extend %H2;
     max-width: 354px;
     width: 100%;
@@ -550,7 +621,8 @@
     white-space: nowrap;
     text-overflow: ellipsis;
   }
-  &__link{
+
+  &__link {
     @extend %Text-16;
     text-decoration: none;
     color: $white;
@@ -565,6 +637,75 @@
   }
 }
 
+/*=====CONTACT=====*/
+
+.contact {
+  padding: 100px 0 150px;
+
+  &__inner {
+    max-width: 935px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__subtitle {
+    @extend %H2;
+    margin-bottom: 50px;
+  }
+}
+
+.contact-form {
+  max-width: 580px;
+  width: 100%;
+  margin: 0 auto;
+
+  &__inputs {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+  }
+
+  &__input {
+    max-width: 270px;
+    width: 100%;
+    min-height: 57px;
+    padding: 18px 20px;
+    border: 1px solid $red;
+    @extend %Text-16;
+
+    &::placeholder {
+      color: $black;
+      opacity: 0.5;
+    }
+  }
+
+  &__textarea {
+    resize: none;
+    width: 100%;
+    height: 291px;
+    padding: 28px 20px;
+    border: 1px solid $red;
+    margin-bottom: 50px;
+    @extend %Text-16;
+
+    &::placeholder {
+      color: $black;
+      opacity: 0.5;
+    }
+  }
+
+  &__button {
+    max-width: 184px;
+    cursor: pointer;
+  }
+}
 
 
 /*

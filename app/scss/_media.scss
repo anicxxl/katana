@@ -1,0 +1,215 @@
+@media (max-width:1025px) {
+  .top {
+    padding-top: 240px;
+  }
+
+  .top__title {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 66px;
+    line-height: 86px;
+  }
+
+  .top__link {
+    min-height: 60px;
+    max-width: 330px;
+    width: 100%;
+    padding: 15px 20px;
+    margin: 0 auto;
+    background-color: #fff;
+  }
+
+  .main-slider-pagination {
+    padding: 0 30px 30px;
+  }
+}
+
+@media (max-width:960px) {
+  .top__title {
+    font-size: 76px;
+    line-height: 96px;
+  }
+
+  .header--second .header-menu {
+    background-color: $black;
+  }
+
+  .header-menu {
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 107px;
+    background-color: $red;
+    padding: 10px;
+    margin: 0;
+    transform: translateY(-300%);
+    transition: all .3s ease-in-out;
+    z-index: 500;
+
+    &--active {
+      transform: translateY(0);
+    }
+
+    &__item {
+      width: 100%;
+    }
+
+    &__item-link {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .header-button {
+    position: static;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .main-slider-pagination {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .video__bg {
+    height: 350px;
+  }
+
+}
+
+@media (max-width:630px) {
+
+  .benefits,
+  .instructions,
+  .video,
+  .importants,
+  .blog,
+  .choose-weapons {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .top {
+    padding-top: 140px;
+    padding-bottom: 92px;
+    text-align: center;
+  }
+
+  .top__title {
+    font-size: 56px;
+    line-height: 76px;
+  }
+
+  .top__link {
+    min-height: 60px;
+    max-width: 300px;
+    padding: 10px;
+    font-size: 28px;
+  }
+
+  .benefits__items {
+    justify-content: center;
+  }
+
+  .benefits-item {
+    gap: 10px;
+  }
+
+  .instructions-list-item {
+    padding: 19px 0px 19px 120px;
+  }
+
+
+  .video__bg {
+    height: 300px;
+  }
+
+  .video__img {
+    max-width: 60px;
+  }
+
+  .importants__items {
+    justify-content: center;
+  }
+
+  .footer__items {
+    padding: 0 30px;
+  }
+
+  .blog-item__info {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  .blog-item__link {
+    align-self: center;
+  }
+
+  .blog-item__title {
+    max-width: 100%;
+  }
+
+  .blog-item__img {
+    height: 170px;
+  }
+
+  .contact-form__inputs {
+    flex-direction: column;
+  }
+
+  .contact-form__input {
+    max-width: 100%;
+  }
+}
+
+@media (max-width:400px) {
+  .header__inner {
+    gap: 10px;
+  }
+
+  .header-button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .video__bg {
+    height: 200px;
+  }
+
+  .blog-item__title {
+    white-space: normal;
+  }
+}
+
+@media (max-width:330px) {
+  .top__title {
+    font-size: 46px;
+    line-height: 56px;
+  }
+}
+
+@media (max-width:300px) {
+  .title {
+    font-size: 38px;
+    line-height: 48px;
+  }
+
+  .instructions-list-item {
+    padding: 120px 0px 19px;
+  }
+
+  .instructions-list-item::before {
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+
+  }
+
+  .video__bg {
+    height: 150px;
+  }
+}

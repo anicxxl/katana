@@ -9,6 +9,8 @@
 
   <title>KATANA</title>
 
+  <!-- ICON -->
+  <link rel="icon" type="image/x-icon" href="images/logo.ico">
   <!-- FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,33 +29,38 @@
 
         <nav class="nav header__nav">
           <ul class="header-menu">
-            <li class="header-menu__item"><a href="choose-weapon.html" class="header-menu__item-link">CHoose WEAPONS</a></li>
+            <li class="header-menu__item"><a href="choose-weapon.html" class="header-menu__item-link">CHoose WEAPONS</a>
+            </li>
             <li class="header-menu__item"><a href="#" class="header-menu__item-link">SKINS</a></li>
             <li class="header-menu__item"><a href="#" class="header-menu__item-link">TUTORIALS</a></li>
             <li class="header-menu__item"><a href="#" class="header-menu__item-link">SHARPNESS TEST</a></li>
-            <li class="header-menu__item"><a href="#" class="header-menu__item-link">CONTACT US</a></li>
+            <li class="header-menu__item"><a href="contact.html" class="header-menu__item-link">CONTACT US</a></li>
           </ul>
         </nav>
+
+        <button class="header-button">
+          <div class="header-button__line"></div>
+          <div class="header-button__line"></div>
+          <div class="header-button__line"></div>
+        </button>
       </div>
     </div>
   </header>
-
   <main class="main">
     <section class="top">
-      <h1 class="top__title">
-        BEST STEEL WEAPONS
-        FROM “KATANA”
-      </h1>
+      <div class="container">
+        <h1 class="top__title">
+          BEST STEEL WEAPONS
+          FROM “KATANA”
+        </h1>
 
-      <a href="choose-weapon.html" class="top__link">BUy</a>
+        <a href="choose-weapon.html" class="top__link">BUy</a>
+      </div>
     </section>
 
     <div class="slider">
-      <!--Главный контейнер слайдера -->
       <div class="swiper main-slider">
-        <!-- Обязательная оболочка -->
         <div class="swiper-wrapper main-slider-wrapper">
-          <!-- Слайды -->
           <div class="swiper-slide main-slider-slide">
             <img src="images/slider/1.jpg" alt="1">
           </div>
@@ -70,7 +77,6 @@
             <img src="images/slider/4.jpg" alt="4">
           </div>
         </div>
-        <!-- Добавляем если нужна пагинация -->
         <div class="swiper-pagination main-slider-pagination"></div>
       </div>
     </div>
@@ -150,12 +156,13 @@
 
           <div class="video__bg" style="background-image: url('images/video_bg.jpg');">
             <a href="https://www.youtube.com/watch?v=iPfno8tAlL0" class="video__link" data-fancybox>
-              <img src="images/youtube.svg" alt="youtube logo">
+              <img src="images/youtube.svg" class="video__img" alt="youtube logo">
             </a>
           </div>
         </div>
       </div>
     </section>
+
 
     <section class="importants">
       <div class="container">
@@ -252,8 +259,8 @@
     </div>
   </footer>
 
-  <!-- SCRIPTS -->
-  <script src="js/main.min.js" defer></script>
+    <!-- SCRIPTS -->
+    <script src="js/main.min.js" defer></script>
 </body>
 
 </html>
