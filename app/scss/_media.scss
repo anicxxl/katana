@@ -31,7 +31,7 @@
     line-height: 96px;
   }
 
-  .header--second .header-menu{
+  .header--second .header-menu {
     background-color: $black;
   }
 
@@ -86,7 +86,9 @@
   .benefits,
   .instructions,
   .video,
-  .importants {
+  .importants,
+  .blog,
+  .choose-weapons {
     padding-top: 50px;
     padding-bottom: 50px;
   }
@@ -137,6 +139,23 @@
   .footer__items {
     padding: 0 30px;
   }
+
+  .blog-item__info {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  .blog-item__link {
+    align-self: center;
+  }
+
+  .blog-item__title {
+    max-width: 100%;
+  }
+
+  .blog-item__img {
+    height: 170px;
+  }
 }
 
 @media (max-width:400px) {
@@ -151,6 +170,10 @@
 
   .video__bg {
     height: 200px;
+  }
+  
+  .blog-item__title {
+    white-space: normal;
   }
 }
 
